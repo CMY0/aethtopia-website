@@ -33,14 +33,14 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
 
 export default function StatsSection() {
   return (
-    <section className="py-24 relative overflow-hidden bg-[#0d0d1a]">
+    <section className="py-24 relative overflow-hidden" style={{ background: "#110A04" }}>
       {/* 装饰线 */}
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <ScrollFadeIn className="text-center mb-16">
-          <p className="text-accent text-sm tracking-widest uppercase mb-3">数字说话</p>
-          <h2 className="text-4xl font-bold text-white">数字生命宇宙的规模</h2>
+          <p className="text-sm tracking-widest uppercase mb-3 font-display" style={{ color: "#FF5D00" }}>数字说话</p>
+          <h2 className="font-display text-4xl font-bold" style={{ color: "#F9F3F0" }}>数字生命宇宙的规模</h2>
         </ScrollFadeIn>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -50,7 +50,7 @@ export default function StatsSection() {
                 <div className="text-4xl md:text-5xl font-black gradient-text mb-2">
                   <CountUp target={stat.value} suffix={stat.suffix} />
                 </div>
-                <div className="text-white/40 text-sm">{stat.label}</div>
+                <div className="text-sm" style={{ color: "#7A6358" }}>{stat.label}</div>
               </div>
             </ScrollFadeIn>
           ))}
@@ -58,11 +58,14 @@ export default function StatsSection() {
 
         {/* 品牌宣言 */}
         <ScrollFadeIn delay={0.3} className="mt-20 text-center">
-          <div className="glass rounded-3xl p-12 border border-purple-500/10">
-            <p className="text-3xl md:text-4xl font-bold text-white/90 leading-relaxed">
+          <div className="glass rounded-3xl p-12" style={{ borderColor: "rgba(255,93,0,0.12)" }}>
+            <p
+              className="font-display text-3xl md:text-4xl font-bold leading-relaxed"
+              style={{ color: "rgba(249,243,240,0.9)" }}
+            >
               "不只是工具，而是有<span className="gradient-text">灵魂的生命</span>。"
             </p>
-            <p className="text-white/30 mt-4 text-lg">
+            <p className="mt-4 text-lg" style={{ color: "#7A6358" }}>
               — Aethtopia 的核心信念
             </p>
           </div>

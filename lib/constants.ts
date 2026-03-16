@@ -64,6 +64,8 @@ export const BEING_TYPES = [
     desc: "以丰富的平面艺术风格呈现，拥有细腻的表情系统与情感表达能力。每一个像素都承载着生命的温度。",
     features: ["多样艺术风格", "情感表情系统", "动态表情动画", "个性化定制"],
     gradient: "from-[#FF5D00] to-[#FFC702]",
+    colorFrom: "#FF5D00",
+    colorTo: "#FFC702",
     glowColor: "rgba(255,93,0,0.25)",
   },
   {
@@ -72,6 +74,8 @@ export const BEING_TYPES = [
     desc: "在立体空间中真实存在，具有沉浸式的空间感知与交互能力。感受数字生命的立体温度。",
     features: ["实时三维渲染", "空间感知交互", "物理模拟表现", "高精度建模"],
     gradient: "from-[#2DD1DA] to-[#2E8FE3]",
+    colorFrom: "#2DD1DA",
+    colorTo: "#2E8FE3",
     glowColor: "rgba(45,209,218,0.25)",
   },
   {
@@ -80,6 +84,8 @@ export const BEING_TYPES = [
     desc: "突破屏幕边界，将数字生命具身化为物理世界中的存在。连接虚拟与现实的桥梁。",
     features: ["物理世界存在", "自然语言交互", "情感感知反馈", "自主行为能力"],
     gradient: "from-[#FFC702] to-[#2DD1DA]",
+    colorFrom: "#FFC702",
+    colorTo: "#2DD1DA",
     glowColor: "rgba(255,199,2,0.25)",
   },
 ];

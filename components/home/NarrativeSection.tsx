@@ -5,10 +5,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { ScrollFadeIn } from "@/components/ui/AnimatedText";
 
 const JOURNEY = [
-  { step: "01", title: "创造于拓拓", subtitle: "Proto", desc: "每一个 AI 生命，都从这里的第一笔开始。", color: "#7c3aed" },
-  { step: "02", title: "誓约于窝窝", subtitle: "Vowen", desc: "建立神圣的数字契约，组建温暖的虚拟家园。", color: "#2563eb" },
-  { step: "03", title: "社交于泡泡", subtitle: "Topia", desc: "成熟的生命在理想国中相遇，形成独特的社群。", color: "#06b6d4" },
-  { step: "04", title: "长伴于伴伴", subtitle: "Lapal", desc: "通过结绊激活，成为真正懂你的长情伴侣。", color: "#f43f5e" },
+  { step: "01", title: "创造于拓拓", subtitle: "Proto", desc: "每一个 AI 生命，都从这里的第一笔开始。", color: "#FF5D00" },
+  { step: "02", title: "誓约于窝窝", subtitle: "Vowen", desc: "建立神圣的数字契约，组建温暖的虚拟家园。", color: "#FFC702" },
+  { step: "03", title: "社交于泡泡", subtitle: "Topia", desc: "成熟的生命在理想国中相遇，形成独特的社群。", color: "#2DD1DA" },
+  { step: "04", title: "长伴于伴伴", subtitle: "Lapal", desc: "通过结绊激活，成为真正懂你的长情伴侣。", color: "#2E8FE3" },
 ];
 
 export default function NarrativeSection() {
@@ -19,16 +19,19 @@ export default function NarrativeSection() {
   return (
     <section ref={ref} className="section-padding relative overflow-hidden">
       {/* 背景装饰 */}
-      <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-blue-600/5 blur-[100px] pointer-events-none" />
+      <div className="aurora-blob w-96 h-96 opacity-8" style={{ background: "#2E8FE3", top: 0, right: 0 }} aria-hidden="true" />
 
       <div className="max-w-7xl mx-auto px-6">
         {/* 标题 */}
         <ScrollFadeIn className="text-center mb-20">
-          <p className="text-purple-400 text-sm tracking-widest uppercase mb-3">数字生命的旅程</p>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
+          <p className="text-sm tracking-widest uppercase mb-3 font-display" style={{ color: "#FF5D00" }}>数字生命的旅程</p>
+          <h2
+            className="font-display text-4xl md:text-5xl font-bold"
+            style={{ color: "#F9F3F0" }}
+          >
             从原型到灵魂
           </h2>
-          <p className="mt-4 text-white/40 text-lg">
+          <p className="mt-4 text-lg" style={{ color: "#B8A99A" }}>
             一段完整的生命旅程，在四个平台中徐徐展开
           </p>
         </ScrollFadeIn>
@@ -36,10 +39,13 @@ export default function NarrativeSection() {
         {/* 旅程步骤 */}
         <div className="relative">
           {/* 连接线 */}
-          <div className="absolute left-[calc(50%-1px)] top-0 bottom-0 w-px bg-white/5 hidden md:block">
+          <div className="absolute left-[calc(50%-1px)] top-0 bottom-0 w-px hidden md:block" style={{ background: "rgba(249,243,240,0.05)" }}>
             <motion.div
-              className="w-full bg-gradient-to-b from-purple-500 via-blue-500 via-cyan-500 to-rose-500 origin-top"
-              style={{ height: lineHeight }}
+              className="w-full origin-top"
+              style={{
+                height: lineHeight,
+                background: "linear-gradient(to bottom, #FF5D00, #FFC702, #2DD1DA, #2E8FE3)",
+              }}
             />
           </div>
 
@@ -61,10 +67,10 @@ export default function NarrativeSection() {
                           <div className="text-sm mb-1" style={{ color: item.color }}>
                             {item.subtitle}
                           </div>
-                          <h3 className="text-2xl font-bold text-white mb-3">
+                          <h3 className="text-2xl font-bold font-display mb-3" style={{ color: "#F9F3F0" }}>
                             {item.title}
                           </h3>
-                          <p className="text-white/50 leading-relaxed">
+                          <p className="leading-relaxed" style={{ color: "#B8A99A" }}>
                             {item.desc}
                           </p>
                         </div>
